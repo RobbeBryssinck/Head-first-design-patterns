@@ -6,7 +6,14 @@ namespace Intro
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Duck mallard = new MallardDuck();
+            mallard.PerformQuack();
+            mallard.PerformFly();
+
+            Duck model = new ModelDuck();
+            model.PerformFly();
+            model.flyBehavior = new FlyRocketPowered();
+            model.PerformFly();
         }
     }
 }
